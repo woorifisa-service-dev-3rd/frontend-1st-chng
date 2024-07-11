@@ -1,4 +1,4 @@
-### 프로젝트명
+![image](https://github.com/woorifisa-service-dev-3rd/frontend-1st-chng/assets/123541776/b24761c4-0d03-4e23-8897-3179babfd0c5)### 프로젝트명
 
 ![chng_mainlogo](https://github.com/woorifisa-service-dev-3rd/frontend-1st-chng/assets/128590006/1b0e79cd-1281-42cb-9202-755808c9ddcd)
 
@@ -102,18 +102,15 @@ margin 및 padding으로 기본 10px 여백 적용
 
 
 ### LightHouse 성능 개선
-![image](https://github.com/woorifisa-service-dev-3rd/frontend-1st-chng/assets/123541776/c74f177d-e083-4d83-a8fe-314e7ab7f18c)
-
--- 최초 1회
 
 
-![image](https://github.com/woorifisa-service-dev-3rd/frontend-1st-chng/assets/123541776/e656f6f8-2e84-4ea4-a339-894325755280)
+# 최초 1회
+![image](https://github.com/woorifisa-service-dev-3rd/frontend-1st-chng/assets/123541776/7c7c2ed1-c48c-4ad2-90a4-24c475d83049)
 
 1. Document 변경
 2. 기능 추가 전 a태그 -> "#"추가
 3. LABELING 추가
 
-
--- 성능 향상
+# 이후 성능 향상
 
 ![image](https://github.com/woorifisa-service-dev-3rd/frontend-1st-chng/assets/123541776/7c186cdf-0006-41e3-b759-dc1acac28ba6)

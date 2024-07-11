@@ -17,12 +17,28 @@
     <div class="cal_box">
         <div class="cal_box_top">
             <div class="cal_box_top_left">
-                <div>금액</div>
+                <div style="margin-left: 5px;">금액</div>
                 <div class="price_box">
                     <input type="number" class="price_input">
                     <div class="price_select">
-                        <button class="price_country">USD</button>
-                        <span></span>
+                        <button class="price_country_button">
+                            <img src="https://wise.com/web-art/assets/flags/usd.svg" alt="USD flag" class="currency_flag">
+                            USD
+                            <span class="dropdown-arrow">▼</span>
+                        </button>
+                        <div class="dropdown">
+                            <div class="dropdown_content">
+                                <a href="#" class="currency_option">
+                                    <img src="https://wise.com/web-art/assets/flags/usd.svg" alt="USD 플래그" class="currency_flag">
+                                    EUR
+                                </a>
+                                <a href="https://wise.com/web-art/assets/flags/usd.svg" class="currency_option">USD</a>
+                                <a href="https://wise.com/web-art/assets/flags/eur.svg" class="currency_option">EUR</a>
+                                <a href="https://wise.com/web-art/assets/flags/krw.svg" class="currency_option">KRW</a>
+                                <a href="https://wise.com/web-art/assets/flags/jpy.svg" class="currency_option">JPY</a>
+                                <a href="https://wise.com/web-art/assets/flags/cny.svg" class="currency_option">CNY</a>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -30,12 +46,24 @@
                 <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSuRCSp_X1MI5IcpErk1t5U4rzWGvSyRSojOQ&s" alt="스위치 아이콘">
             </div>
             <div class="cal_box_top_right">
-                <div>환전</div>
+                <div style="margin-left: 5px;">환전</div>
                 <div class="exchange_box">
-                    <input type="text" class="exchange_input">
+                    <input type="number" class="exchange_input">
                     <div class="exchange_select">
-                        <button class="exchange_country">USD</button>
-                        <span></span>
+                        <button class="exchange_country_button">
+                            <img src="https://wise.com/web-art/assets/flags/krw.svg" alt="KRW flag" class="currency_flag">
+                            KRW
+                            <span class="dropdown-arrow">▼</span>
+                        </button>
+                        <div class="dropdown">
+                            <div class="dropdown_content">
+                                <a href="https://wise.com/web-art/assets/flags/usd.svg" class="currency_option">USD</a>
+                                <a href="https://wise.com/web-art/assets/flags/eur.svg" class="currency_option">EUR</a>
+                                <a href="https://wise.com/web-art/assets/flags/krw.svg" class="currency_option">KRW</a>
+                                <a href="https://wise.com/web-art/assets/flags/jpy.svg" class="currency_option">JPY</a>
+                                <a href="https://wise.com/web-art/assets/flags/cny.svg" class="currency_option">CNY</a>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>

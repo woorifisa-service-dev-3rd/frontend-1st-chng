@@ -10,6 +10,7 @@
 
 ### 프로젝트 시연 영상
 
+https://github.com/woorifisa-service-dev-3rd/frontend-1st-chng/assets/123541776/a8f7bc09-633b-4896-a52f-cc5346294c94
 
 
 ### 프로젝트 개요 및 목적

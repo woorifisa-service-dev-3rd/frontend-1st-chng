@@ -1,4 +1,4 @@
-![image](https://github.com/woorifisa-service-dev-3rd/frontend-1st-chng/assets/123541776/14d48ee9-afd1-4c92-8eda-92a0ddb3cfd8)![image](https://github.com/woorifisa-service-dev-3rd/frontend-1st-chng/assets/123541776/b24761c4-0d03-4e23-8897-3179babfd0c5)### 프로젝트명
+### 프로젝트명
 
 ![chng_mainlogo](https://github.com/woorifisa-service-dev-3rd/frontend-1st-chng/assets/128590006/1b0e79cd-1281-42cb-9202-755808c9ddcd)
 

@@ -1,11 +1,14 @@
 body {
+    background-color: black;
+}
+
+section {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: black;
-    height: 100vh;
-    margin: 0;
+    height: 100%;
+    margin-top: 80px;
     font-family: "Noto Sans KR", sans-serif;
 }
 
@@ -64,6 +67,11 @@ body {
     border-radius: 10px;
 }
 
+.price_box:hover {
+    border-color: #97f5f2;
+    transition: 0.1s;
+}
+
 .price_box:nth-child(2) {
     display: flex;
     justify-content: center;
@@ -100,6 +108,11 @@ body {
     border-radius: 10px;
 }
 
+.exchange_box:hover {
+    border-color: #97f5f2;
+    transition: 0.1s;
+}
+
 .exchange_box:nth-child(2) {
     display: flex;
     justify-content: center;
@@ -118,6 +131,18 @@ body {
     margin-right: 10px;
     border: 0;
     font-size: 30px;
+}
+
+.price_input::-webkit-outer-spin-button,
+.price_input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.exchange_input::-webkit-outer-spin-button,
+.exchange_input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
 }
 
 .bottom_output {

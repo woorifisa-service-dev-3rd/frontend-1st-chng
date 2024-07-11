@@ -1,8 +1,8 @@
 ### 프로젝트명
 
-**chng(챈지)**
 ![chng_mainlogo](https://github.com/woorifisa-service-dev-3rd/frontend-1st-chng/assets/128590006/1b0e79cd-1281-42cb-9202-755808c9ddcd)
 
+**chng(챈지)**
 
 프로젝트명 “chng(챈지)”는 “exchange(환전)”의 줄임말로, 사용자에게 간단한 환율 계산기를 제공하는 웹 애플리케이션입니다.
 

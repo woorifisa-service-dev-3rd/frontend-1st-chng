@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="cal_style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="cal_title">
+        <h1>환율계산기</h1>
+    </div>
+    
+    <div class="cal_box">
+        <div class="cal_box_top">
+            <div class="cal_box_top_left">
+                <div>금액</div>
+                <div class="price_box">
+                    <input type="number" class="price_input">
+                    <div class="price_select">
+                        <button class="price_country">USD</button>
+                        <span></span>
+                    </div>
+                </div>
+            </div>
+            <div class="cal_box_top_mid">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSuRCSp_X1MI5IcpErk1t5U4rzWGvSyRSojOQ&s" alt="스위치 아이콘">
+            </div>
+            <div class="cal_box_top_right">
+                <div>환전</div>
+                <div class="exchange_box">
+                    <input type="text" class="exchange_input">
+                    <div class="exchange_select">
+                        <button class="exchange_country">USD</button>
+                        <span></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="cal_box_bottom">
+            <div class="cal_box_bottom_left">
+                <div class="bottom_output">$1.000 USD = ₩1,382 KRW</div>
+                <div class="bottom_time">Mid-market exchange rate at 09:57</div>
+            </div>
+            <div class="cal_box_bottom_right">
+                <div>
+                    <button class="exchange_button">환율 계산</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+</body>
+</html>

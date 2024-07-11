@@ -6,7 +6,12 @@
 
 프로젝트명 “chng(챈지)”는 “exchange(환전)”의 줄임말로, 사용자에게 간단한 환율 계산기를 제공하는 웹 애플리케이션입니다.
 
-  
+
+
+### 프로젝트 시연 영상
+
+![image](https://github.com/woorifisa-service-dev-3rd/frontend-1st-chng/assets/123541776/05db0a8d-f476-4d67-ad26-3f3a5494c6c1)
+
 
 ### 프로젝트 개요 및 목적
 
@@ -94,3 +99,21 @@ SUB COLOR: #12FFD8
 상황에 따라 양쪽 정렬, 좌측 정렬 사용
 
 margin 및 padding으로 기본 10px 여백 적용
+
+
+### LightHouse 성능 개선
+![image](https://github.com/woorifisa-service-dev-3rd/frontend-1st-chng/assets/123541776/c74f177d-e083-4d83-a8fe-314e7ab7f18c)
+
+-- 최초 1회
+
+
+![image](https://github.com/woorifisa-service-dev-3rd/frontend-1st-chng/assets/123541776/e656f6f8-2e84-4ea4-a339-894325755280)
+
+1. Document 변경
+2. 기능 추가 전 a태그 -> "#"추가
+3. LABELING 추가
+
+
+-- 성능 향상
+
+![image](https://github.com/woorifisa-service-dev-3rd/frontend-1st-chng/assets/123541776/7c186cdf-0006-41e3-b759-dc1acac28ba6)

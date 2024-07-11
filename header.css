@@ -86,11 +86,16 @@ header {
     font-size: 20px;
 }
 
+.header_bar_top_right {
+    display: flex;
+    justify-content: flex-end;
+}
+
 .header_bar_top_right a {
     margin-right: 12px;
 }
 
-.login_button {
+.login_btn {
     background-color: #15F4EE;
     color: black;
     font-weight: bold;

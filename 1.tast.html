@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>papago</title>
+    <style>
+        body {
+            background-color: black;
+            margin: 0;
+            padding: 0;
+            color: white;
+            /* Default text color */
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        /* Styling for the blue text inside */
+        .blue-text {
+            color: #15F4EE;
+            /* Light blue color */
+            text-decoration: none;
+            /* Remove underline */
+            font-family: 'Black Han Sans', sans-serif;
+            font-style: italic;
+            font-size: xx-large;
+            font-weight: bold;
+        }
+
+        .personal2 {
+            color: #15F4EE;
+            /* Light blue color */
+            text-decoration: none;
+            /* Remove underline */
+            font-family: 'Black Han Sans', sans-serif;
+            font-style: italic;
+            font-size: xx-large;
+            font-weight: bold;
+        }
+
+        #whitebox {
+            display: flex;
+            background-color: #15F4EE;
+            color: black;
+            width: 100%;
+            height: 20px;
+            box-sizing: border-box;
+            text-align: center;
+            font-family: 'Noto Sans KR', sans-serif;
+            font-weight: bold;
+            font-size: 8px;
+            justify-content: flex-start;
+
+        }
+
+        #whitebox a {
+
+            color: black;
+            /* Text color inside the whitebox */
+            text-decoration: none;
+            /* Remove underline */
+            margin-right: 7px;
+            text-align: center;
+
+
+        }
+
+        #middlebox {
+            background-color: hsl(180, 100%, 98%);
+            text-align: center;
+            display: flex;
+            margin: 60px 50px 30px 50px;
+            height: 60px;
+
+        }
+
+        .flex-container {
+            display: flex;
+        }
+
+        .flex-item1 {
+            margin: 1;
+            height: 82px;
+            width: 152px;
+            border: 2px solid #ccc;
+            /* 너비 2px, 실선 스타일, 회색 선 */
+            padding: 20px;
+            /* 테두리와 내용 사이 간격 */
+        }
+
+        .flex-item2 {
+            margin: 1;
+            height: 82px;
+            width: 106px;
+            border: 2px solid #ccc;
+            /* 너비 2px, 실선 스타일, 회색 선 */
+            padding: 20px;
+            /* 테두리와 내용 사이 간격 */
+
+        }
+
+        .flex-item3 {
+            margin: 1;
+            height: 82px;
+            width: 1000px;
+            border: 2px solid #ccc;
+            /* 너비 2px, 실선 스타일, 회색 선 */
+            padding: 20px;
+            /* 테두리와 내용 사이 간격 */
+
+            /* flexbox 레이아웃을 사용하겠다고 선언 */
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .flex-item4 {
+            margin: 1;
+            height: 82px;
+            width: 80px;
+            border: 2px solid #ccc;
+            /* 너비 2px, 실선 스타일, 회색 선 */
+            padding: 20px;
+            /* 테두리와 내용 사이 간격 */
+        }
+
+
+        .flex-item {
+            min-width: 151px;
+
+        }
+
+        .personal {
+            border: 1px solid white;
+            border-radius: 12px;
+            padding: 0.25rem;
+            background-color: #15F4EE;
+
+        }
+    </style>
+</head>
+
+<body>
+
+
+
+    <div class="flex-container">
+        <div class="flex-item1"></div>
+
+        <div class="flex-item2">
+            <div><a href="#" class="blue-text">chan</a></div>
+
+
+
+        </div>
+
+
+        <div class="flex-item3">
+            <div>
+                <a href="#" class="personal">개인</a>
+                <a href="#">비즈니스</a>
+            </div>
+            <div class="personal2">
+
+                <a href="#">기능</a>
+                <a href="#">가격</a>
+                <a href="#">지원</a>
+                <a href="#">로그인</a>
+            </div>
+            <div>
+                <a href="#" class="personal">등록</a>
+            </div>
+        </div>
+        <div class="flex-item1"></div>
+    </div>
+    </div>
+    <div class="flex-container">
+        <div class="flex-item1"></div>
+
+        <div class="flex-item2">
+            <div><a href="#" class="blue-text">chan</a></div>
+
+
+
+        </div>
+
+
+        <div class="flex-item3">
+            <div>
+                <a href="#" class="personal">개인</a>
+                <a href="#">비즈니스</a>
+            </div>
+
+            <div>
+                <a href="#">기능</a>
+                <a href="#">가격</a>
+                <a href="#">지원</a>
+                <a href="#">로그인</a>
+                <a href="#" class="personal">등록</a>
+            </div>
+        </div>
+        <div class="flex-item1"></div>
+    </div>
+    </div>
+
+
+
+
+</body>
+
+</html>

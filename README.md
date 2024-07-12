@@ -54,6 +54,8 @@ Front: `HTML`, `CSS`
 
 ### 이용 방법
 
+https://woorifisa-service-dev-3rd.github.io/frontend-1st-chng/
+혹은
 git clone https://github.com/woorifisa-service-dev-3rd/frontend-1st-chng.git
 
 환율계산기에 금액을 입력하고 “환율 계산” 버튼을 클릭하기만 하면 선택하신 기준 환율을 알려드립니다.

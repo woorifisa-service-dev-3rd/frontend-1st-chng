@@ -10,6 +10,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Black+Han+Sans&display=swap" rel="stylesheet">
+    <script defer src="local_storage.js"> </script>
 </head>
 <body>
     <header>
@@ -26,7 +27,9 @@
                     <a>기능</a>
                     <a>가격</a>
                     <a>지원</a>
-                    <button class="login_button">로그인</a>
+                    <form action="login.html" method="get">
+                        <button type="submit" class="login_btn">로그인</button>
+                    </form>
                 </div>
             </div>
             <div class="header_bar_bottom">
@@ -102,7 +105,7 @@
                 </div>
                 <div class="cal_box_bottom_right">
                     <div>
-                        <button class="exchange_button">환율 계산</button>
+                        <button class="exchange_button" id="exchange_button">환율 계산</button>
                     </div>
                 </div>
             </div>

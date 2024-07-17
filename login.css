@@ -71,6 +71,10 @@ input, button{
     align-items: center; */
 }
 
+
+.xbutton a:visited {
+    color: #15F4EE;/* 방문된 상태일 때의 색상 */
+}
 /* .main
 {
     height: 10000px;
@@ -192,4 +196,9 @@ input, button{
 .snsbuttons:hover
 {
     color :#15F4EE;
+}
+
+.xbutton:hover
+{
+    color : hsl(178, 100%, 67%) ;
 }

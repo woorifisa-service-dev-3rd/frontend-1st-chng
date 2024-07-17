@@ -238,3 +238,10 @@ section {
     border: 0;
     background-color: transparent;
 }
+
+#price_select_option, #exchange_select_option {
+    border: 0;
+    width: 80px;
+    height: 30px;
+    font-size: 20px;
+}

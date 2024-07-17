@@ -1,13 +1,13 @@
 header {
     font-family: "Noto Sans KR", sans-serif;
-    color: #15F4EE;
+    color:
 }
 
 .header_bar {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    color: #15F4EE;
+    color: #04aa6d
 }
 
 .header_bar_top {
@@ -15,7 +15,7 @@ header {
     justify-content: space-between;
 }
 
-.header_bar_top div{
+.header_bar_top div {
     display: flex;
     align-items: center;
     padding-left: 100px;
@@ -32,38 +32,52 @@ header {
     margin-left: 20px;
 }
 
-.person_button {
-    background-color: #15F4EE;
+.business_button {
+    background-color: #04aa6d;
     border: 0;
     height: 30px;
     border-radius: 15px;
-    width: 60px;
+    width: 90px;
+    margin-left: 10px;
+    margin-right: 20px;
+    font-weight: bold;
+    color: white;
+}
+
+.person_button {
+    background-color: #04aa6d;
+    border: 0;
+    height: 30px;
+    border-radius: 15px;
+    width: 90px;
     margin-left: 10px;
     margin-right: 10px;
     font-weight: bold;
+    color: white;
+}
+
+.login_btn:hover {
+    border: 1px solid;
+    background-color: #D9EEE1;
+    border-color: #D9EEE1;
+    transition: 0.1s;
+    color: black;
+
 }
 
 .person_button:hover {
     border: 1px solid;
-    background-color: #97f5f2;
-    border-color: #97f5f2;
+    background-color: #D9EEE1;
+    border-color: #D9EEE1;
     transition: 0.1s;
+    color: black;
 }
 
-.business_button {
-    background-color: transparent;
-    color: #15F4EE;
-    border: 0;
-    height: 30px;
-    border-radius: 15px;
-    width: 70px;
-    font-weight: bold;
-}
 
 .business_button:hover {
     border: 1px solid;
-    background-color: #97f5f2;
-    border-color: #97f5f2;
+    background-color: #D9EEE1;
+    border-color: #D9EEE1;
     transition: 0.1s;
     color: black;
 }
@@ -73,7 +87,7 @@ header {
     padding-left: 100px;
     padding-top: 7px;
     padding-bottom: 7px;
-    background-color: #15F4EE;
+    background-color: #282a35;
     color: black;
     font-weight: bold;
 }
@@ -95,13 +109,14 @@ header {
     margin-right: 12px;
 }
 
+/*  */
 .login_btn {
-    background-color: #15F4EE;
-    color: black;
+    background-color: #04aa6d;
     font-weight: bold;
     font-size: 15px;
     border: 0;
     height: 30px;
     border-radius: 15px;
     width: 70px;
+    color: white;
 }

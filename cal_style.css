@@ -1,6 +1,7 @@
 body {
-    background-color: black;
+    background-color: #FFFFFF;
 }
+
 
 section {
     display: flex;
@@ -12,31 +13,40 @@ section {
     font-family: "Noto Sans KR", sans-serif;
 }
 
+
 .cal_title {
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
-    color: #15F4EE;
-    font-size: 20px;
+    color: #04aa6d;
+    font-size: 40px;
+
+
+
 }
 
 .cal_title h1 {
     font-weight: bold;
+
 }
+
+
 
 .cal_box {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-content: center;
-    background-color: white;
-    height: 260px;
+    justify-content: center background-color: #D9EEE1;
+    space beat height: 260px;
     width: 1000px;
     border-radius: 35px;
     margin: 10px;
     padding: 20px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: lightgray;
+
+
+
+
 }
 
 .cal_box_top {
@@ -62,14 +72,17 @@ section {
     display: flex;
     height: 60%;
     margin-top: 10px;
-    border: 4px solid;
-    border-color: #d2f3f8;
+    border: 2px solid;
+    border-color: #04aa6d;
     border-radius: 10px;
+
+
 }
 
 .price_box:hover {
-    border-color: #97f5f2;
+    border-color: #D9EEE1;
     transition: 0.1s;
+
 }
 
 .price_box:nth-child(2) {
@@ -103,14 +116,17 @@ section {
     display: flex;
     height: 60%;
     margin-top: 10px;
-    border: 4px solid;
-    border-color: #d2f3f8;
+    border: 2px solid;
+    border-color: #04aa6d;
     border-radius: 10px;
+    transition: 0.1s;
 }
 
+
 .exchange_box:hover {
-    border-color: #97f5f2;
+    border-color: #D9EEE1;
     transition: 0.1s;
+
 }
 
 .exchange_box:nth-child(2) {
@@ -124,6 +140,7 @@ section {
     margin-right: 10px;
     border: 0;
     font-size: 30px;
+    background-color: #d3d3d3;
 }
 
 .exchange_input {
@@ -131,6 +148,8 @@ section {
     margin-right: 10px;
     border: 0;
     font-size: 30px;
+    background-color: #d3d3d3;
+
 }
 
 .price_input::-webkit-outer-spin-button,
@@ -174,14 +193,19 @@ section {
     height: 50px;
     font-size: 20px;
     font-weight: bold;
-    background-color: #15F4EE;
+    background-color: #04aa6d;
     border: 0;
     border-radius: 20px;
+    color: white;
+
+
 }
 
 .exchange_button:hover {
-    background-color: hsl(178, 100%, 67%);
+    background-color: #c2decd;
+    border-color: #D9EEE1;
     transition: 0.1s;
+    color: black;
 }
 
 .dropdown {

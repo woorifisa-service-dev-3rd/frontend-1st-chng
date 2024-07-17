@@ -72,6 +72,7 @@ function testing()
 
 exchange_button.addEventListener('click',(() => {
     testing()
+    console.log("병합?")
 }))
 
 

@@ -12,6 +12,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Black+Han+Sans&display=swap" rel="stylesheet">
     <script defer src="local_storage.js"> </script>
+    <script defer src="api.js"></script>
 </head>
 
 <body>
@@ -48,8 +49,8 @@
                 <div class="cal_box_top_left">
                     <div style="margin-left: 5px;">금액</div>
                     <div class="price_box">
-                        <input type="number" class="price_input">
-                        <div class="price_select">
+                        <input type="text" maxlength="15" onkeyup="inputNumberFormat(this);" placeholder="" class="price_input">
+                        <!-- <div class="price_select">
                             <button class="price_country_button">
                                 <img src="https://wise.com/web-art/assets/flags/usd.svg" alt="USD flag"
                                     class="currency_flag">
@@ -75,6 +76,24 @@
                                         class="currency_option">CNY</a>
                                 </div>
                             </div>
+                            <div class="exchange_select">
+                                <select name="" id="select_option">
+                                    <option value="usd">USD</option>
+                                    <option value="eur">EUR</option>
+                                    <option value="krw">KRW</option>
+                                    <option value="jpy">JPY</option>
+                                    <option value="cny">CNY</option>
+                                </select>
+                            </div>
+                        </div> -->
+                        <div class="price_select">
+                            <select name="" id="price_select_option">
+                                <option value="usd">USD</option>
+                                <option value="eur">EUR</option>
+                                <option value="krw" >KRW</option>
+                                <option value="jpy">JPY</option>
+                                <option value="cny">CNY</option>
+                            </select>
                         </div>
                     </div>
                 </div>
@@ -98,8 +117,9 @@
                 <div class="cal_box_top_right">
                     <div style="margin-left: 5px;">환전</div>
                     <div class="exchange_box">
-                        <input type="number" class="exchange_input">
-                        <div class="exchange_select">
+                        <input type="text" maxlength="15" onkeyup="inputNumberFormat(this);" placeholder="" class="exchange_input" disabled>
+                        
+                        <!-- <div class="exchange_select">
                             <button class="exchange_country_button">
                                 <img src="https://wise.com/web-art/assets/flags/krw.svg" alt="KRW flag"
                                     class="currency_flag">
@@ -120,6 +140,16 @@
                                         class="currency_option">CNY</a>
                                 </div>
                             </div>
+                        </div> -->
+
+                        <div class="exchange_select">
+                            <select name="" id="exchange_select_option">
+                                <option value="krw">KRW</option>
+                                <option value="usd">USD</option>
+                                <option value="eur">EUR</option>
+                                <option value="jpy">JPY</option>
+                                <option value="cny">CNY</option>
+                            </select>
                         </div>
                     </div>
                 </div>

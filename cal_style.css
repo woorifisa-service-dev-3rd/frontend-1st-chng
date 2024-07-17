@@ -1,0 +1,270 @@
+/* body {
+    background-color: #FFFFFF;
+}
+
+
+section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    margin-top: 80px;
+    font-family: "Noto Sans KR", sans-serif;
+}
+
+
+.cal_title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #04aa6d;
+    font-size: 40px;
+
+
+
+}
+
+.cal_title h1 {
+    font-weight: bold;
+
+}
+
+
+
+.cal_box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center 
+    height: 260px;
+    width: 1000px;
+    border-radius: 35px;
+    margin: 10px;
+    padding: 20px;
+    background-color: lightgray;
+
+
+
+
+}
+
+.cal_box_top {
+    display: flex;
+    justify-content: space-between;
+    height: 50%;
+    margin: 10px;
+    padding: 25px;
+    padding-bottom: 20px;
+    font-weight: bold;
+}
+
+.cal_box_bottom {
+    display: flex;
+    justify-content: space-between;
+    height: 50%;
+    margin: 0px 10px 10px 10px;
+    padding-left: 25px;
+    padding-right: 25px;
+}
+
+.price_box {
+    display: flex;
+    height: 60%;
+    margin-top: 10px;
+    border: 2px solid;
+    border-color: #04aa6d;
+    border-radius: 10px;
+
+
+}
+
+.price_box:hover {
+    border-color: #D9EEE1;
+    transition: 0.1s;
+
+}
+
+.price_box:nth-child(2) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cal_box_top_mid {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.cal_box_top_mid img {
+    width: 40px;
+    height: 40px;
+}
+
+.cal_box_top_left {
+    margin-right: 25px;
+    width: 100%;
+}
+
+.cal_box_top_right {
+    margin-left: 25px;
+    width: 100%;
+}
+
+.exchange_box {
+    display: flex;
+    height: 60%;
+    margin-top: 10px;
+    border: 2px solid;
+    border-color: #04aa6d;
+    border-radius: 10px;
+    transition: 0.1s;
+}
+
+
+.exchange_box:hover {
+    border-color: #D9EEE1;
+    transition: 0.1s;
+
+}
+
+.exchange_box:nth-child(2) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.price_input {
+    width: 70%;
+    margin-right: 10px;
+    border: 0;
+    font-size: 30px;
+    background-color: #d3d3d3;
+}
+
+.exchange_input {
+    width: 70%;
+    margin-right: 10px;
+    border: 0;
+    font-size: 30px;
+    background-color: #d3d3d3;
+
+}
+
+.price_input::-webkit-outer-spin-button,
+.price_input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.exchange_input::-webkit-outer-spin-button,
+.exchange_input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.bottom_output {
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.bottom_time {
+    font-size: 15px;
+    margin-top: 5px;
+}
+
+.cal_box_bottom_left {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+}
+
+.cal_box_bottom_right {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 50%;
+    margin-right: 20px;
+}
+
+.exchange_button {
+    width: 250px;
+    height: 50px;
+    font-size: 20px;
+    font-weight: bold;
+    background-color: #04aa6d;
+    border: 0;
+    border-radius: 20px;
+    color: white;
+
+
+}
+
+.exchange_button:hover {
+    background-color: #c2decd;
+    border-color: #D9EEE1;
+    transition: 0.1s;
+    color: black;
+}
+
+.dropdown {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 1;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.dropdown_content {
+    display: flex;
+    flex-direction: column;
+}
+
+.currency_option {
+    padding: 10px;
+    text-decoration: none;
+    color: #000;
+    cursor: pointer;
+}
+
+.currency_option:hover {
+    background-color: #f0f0f0;
+}
+
+.currency_flag {
+    width: 25px;
+    height: 25px;
+}
+
+.price_country_button {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 18px;
+    font-weight: bold;
+    width: 100px;
+    border: 0;
+    background-color: transparent;
+}
+
+.exchange_country_button {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 18px;
+    font-weight: bold;
+    width: 100px;
+    border: 0;
+    background-color: transparent;
+}
+
+table,th,td {
+    background-color: white; 
+    border: 4px solid blue; 
+    border-collapse: collapse;
+} */

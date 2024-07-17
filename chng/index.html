@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- header -->
+    <header>
+        <div class="header_square">
+            <div class="header_secondary_square">
+                <div class="logo">chng</div>
+                <div class="header_left_link">
+                    <a href="#">개인</a>
+                    <a href="#">비즈니스</a>
+                </div>
+
+                <div class="header_right_link">
+                    <a href="#">기능</a>
+                    <a href="#">가격</a>
+                    <a href="#">지원</a>
+                    <a href="#">로그인</a>
+                    <a href="#">등록</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="nav_square">
+            <div class="nav_secondary_square">
+                <div class="nav_link">
+                    <a href="#">환율계산기</a>
+                    <a href="#">모든 통화 찾아보기</a>
+                    <a href="#">환율 알림 수신</a>
+                    <a href="#">은행 환율 비교</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- section -->
+    <section>
+
+        <div class="cal_title">
+            <h1>환율계산기</h1>
+        </div>
+        <div class="cal">
+            <div class="cal_box">
+                <div class="cal_box_top">
+                    <div class="cal_box_top_left">
+                        <div class="exchan">금액</div>
+                        <div class="price_box">
+                            <input type="number" class="price_input">
+                            <div class="price_select">
+                                <button class="price_country_button">
+                                    <img src="https://wise.com/web-art/assets/flags/usd.svg" alt="USD flag"
+                                        class="currency_flag">
+                                    USD
+                                    <span class="dropdown-arrow">▼</span>
+                                </button>
+                                <div class="dropdown">
+                                    <div class="dropdown_content">
+                                        <a href="#" class="currency_option">
+                                            <img src="https://wise.com/web-art/assets/flags/usd.svg" alt="USD 플래그"
+                                                class="currency_flag">
+
+                                        </a>
+                                        <a href="https://wise.com/web-art/assets/flags/usd.svg"
+                                            class="currency_option">USD</a>
+                                        <a href="https://wise.com/web-art/assets/flags/eur.svg"
+                                            class="currency_option">EUR</a>
+                                        <a href="https://wise.com/web-art/assets/flags/krw.svg"
+                                            class="currency_option">KRW</a>
+                                        <a href="https://wise.com/web-art/assets/flags/jpy.svg"
+                                            class="currency_option">JPY</a>
+                                        <a href="https://wise.com/web-art/assets/flags/cny.svg"
+                                            class="currency_option">CNY</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cal_box_top_mid">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSuRCSp_X1MI5IcpErk1t5U4rzWGvSyRSojOQ&s"
+                            alt="스위치 아이콘">
+                    </div>
+                    <div class="cal_box_top_right">
+                        <div class="exchan">환전</div>
+                        <div class="exchange_box">
+                            <input type="number" class="exchange_input">
+                            <div class="exchange_select">
+                                <button class="exchange_country_button">
+                                    <img src="https://wise.com/web-art/assets/flags/krw.svg" alt="KRW flag"
+                                        class="currency_flag">
+                                    <!-- 나라 고르기 버튼 구현중 -->
+                                    <!-- <div class="exchange-rate"> 
+                                <div class="currency-selector">
+                                    <input type="text" class="amount-input" value="1,000" />
+                                    <img src="kr-flag.png" alt="KRW" class="currency-flag" />
+                                    <select id="currency-from">
+                                        <option value="KRW" selected>KRW</option>
+                                        <option value="USD">USD</option>
+                                        <option value="EUR">EUR</option>
+                                       
+                                 </select>
+                                </div>
+                                <div class="exchange-arrow">⇄</div>
+                                <div class="currency-selector">
+                                    <input type="text" class="amount-input" value="0.73" />
+                                    <img src="us-flag.png" alt="USD" class="currency-flag" />
+                                    <select id="currency-to">
+                                        <option value="USD" selected>USD</option>
+                                        <option value="KRW">KRW</option>
+                                        <option value="EUR">EUR</option>
+                                       
+                                    </select>
+                                </div>
+                            </div>-->
+
+                                    <!-- 나라고르기 구현중   -->
+                                    <span class="dropdown-arrow">▼</span>
+                                </button>
+                                <div class="dropdown">
+                                    <div class="dropdown_content">
+                                        <a href="https://wise.com/web-art/assets/flags/usd.svg"
+                                            class="currency_option">USD</a>
+                                        <a href="https://wise.com/web-art/assets/flags/eur.svg"
+                                            class="currency_option">EUR</a>
+                                        <a href="https://wise.com/web-art/assets/flags/krw.svg"
+                                            class="currency_option">KRW</a>
+                                        <a href="https://wise.com/web-art/assets/flags/jpy.svg"
+                                            class="currency_option">JPY</a>
+                                        <a href="https://wise.com/web-art/assets/flags/cny.svg"
+                                            class="currency_option">CNY</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="cal_box_bottom">
+                    <div class="cal_box_bottom_left">
+                        <div class="bottom_output">$1.000 USD = ₩1,382 KRW</div>
+                        <div class="bottom_time">Mid-market exchange rate at 09:57</div>
+                    </div>
+                    <div class="cal_box_bottom_right">
+                        <div>
+                            <button class="exchange_button">환율 계산</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!— bottom —>
+        <footer></footer>
+</body>
+
+</html>

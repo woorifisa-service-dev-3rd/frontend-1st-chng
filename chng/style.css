@@ -1,0 +1,368 @@
+body {
+    background-color: rgba(15, 29, 4, 0.9);
+    font-family: Arial, sans-serif;
+
+}
+
+a {
+    text-decoration: none;
+    color: #9FE870;
+}
+
+/* header */
+
+.header_square {
+
+    font-size: 20px;
+
+}
+
+.header_secondary_square {
+    display: flex;
+    margin: 0 auto;
+    width: 70%;
+    max-width: 1200px;
+    height: 70px;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+
+}
+
+.logo {
+    font-size: 50px;
+    font-weight: bold;
+    color: #9FE870;
+    padding-right: 40px;
+
+}
+
+.header_left_link,
+.header_right_link {
+    display: flex;
+    gap: 20px;
+
+}
+
+.header_right_link {
+    margin-left: auto;
+
+}
+
+.nav_square {
+    background-color: rgba(38, 87, 0, 0.9);
+    font-size: 18px;
+
+}
+
+.nav_secondary_square {
+    display: flex;
+    margin: 0 auto;
+    width: 70%;
+    max-width: 1200px;
+    height: 70px;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.nav_link {
+    display: flex;
+    gap: 20px;
+
+
+
+}
+
+.article {
+    display: flex;
+    margin: 0 auto;
+    width: 70%;
+    max-width: 1200px;
+    height: 70px;
+    justify-content: space-between;
+    align-items: center;
+    color: black;
+    padding: 10px 20px;
+}
+
+.cal {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+
+
+.cal_title {
+    display: flex;
+    justify-content: center;
+    line-height: normal;
+    text-align: center;
+    color: #9FE870;
+    font-size: 40px;
+    align-items: flex-end;
+    height: 255px;
+
+
+}
+
+
+.cal_box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #ccc;
+    height: 300px;
+    width: 1200px;
+    border-radius: 35px;
+    margin: 10px;
+    padding: 20px;
+
+
+
+}
+
+.cal_box_top {
+    display: flex;
+    justify-content: space-between;
+    height: 60%;
+    margin: 1px;
+    padding: 25px;
+    padding-bottom: 20px;
+    font-weight: bold;
+}
+
+.cal_box_bottom {
+    display: flex;
+    justify-content: space-between;
+    height: 50%;
+    margin: 0px 10px 10px 10px;
+    padding-left: 25px;
+    padding-right: 25px;
+}
+
+.price_box {
+    display: flex;
+    height: 60%;
+    margin-top: 10px;
+    border: 4px solid;
+    border-color: #000000;
+    border-radius: 10px;
+}
+
+
+
+.price_box:nth-child(2) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cal_box_top_mid {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+
+}
+
+.cal_box_top_mid img {
+    width: 40px;
+    height: 40px;
+}
+
+.cal_box_top_left {
+    margin-right: 25px;
+    width: 100%;
+}
+
+.cal_box_top_right {
+    margin-left: 25px;
+    width: 100%;
+}
+
+.exchan {
+    font-size: 20px;
+}
+
+.exchange_box {
+    display: flex;
+    height: 60%;
+    margin-top: 10px;
+    border: 4px solid;
+    border-radius: 10px;
+}
+
+.exchange_box:hover {
+    border-color: black;
+    transition: 0.1s;
+}
+
+.exchange_box:nth-child(2) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.price_input {
+    width: 70%;
+    margin-right: 10px;
+    border: 0;
+    font-size: 30px;
+}
+
+.exchange_input {
+    width: 70%;
+    margin-right: 10px;
+    border: 0;
+    font-size: 30px;
+}
+
+.price_input::-webkit-outer-spin-button,
+.price_input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.exchange_input::-webkit-outer-spin-button,
+.exchange_input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.bottom_output {
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.bottom_time {
+    font-size: 15px;
+    margin-top: 5px;
+}
+
+.cal_box_bottom_left {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+}
+
+.cal_box_bottom_right {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 50%;
+    margin-right: 20px;
+}
+
+.exchange_button {
+    width: 250px;
+    height: 50px;
+    font-size: 20px;
+    font-weight: bold;
+    background-color: #9FE870;
+    border: 0;
+    border-radius: 20px;
+
+}
+
+.exchange_button:hover {
+    background-color: black;
+    transition: 0.1s;
+}
+
+.dropdown {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 1;
+    background-color: #ccc;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.dropdown_content {
+    display: flex;
+    flex-direction: column;
+}
+
+.currency_option {
+    padding: 10px;
+    text-decoration: none;
+    color: #000;
+    cursor: pointer;
+}
+
+.currency_option:hover {
+    background-color: #ccc;
+}
+
+.currency_flag {
+    width: 25px;
+    height: 25px;
+}
+
+.price_country_button {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 18px;
+    font-weight: bold;
+    width: 100px;
+    border: 0;
+    background-color: transparent;
+}
+
+.exchange_country_button {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 18px;
+    font-weight: bold;
+    width: 100px;
+    border: 0;
+    background-color: transparent;
+}
+
+/* 나라고르기 버튼 구현중 */
+.currency-selector {
+    display: flex;
+    justify-content: f;
+    /* 부모 요소의 자식 요소들을 왼쪽으로 정렬 */
+    width: 600px;
+    align-items: center;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 10px;
+
+}
+
+.currency-selector select {
+    border: none;
+    outline: none;
+    font-size: 16px;
+    margin-left: 10px;
+}
+
+.currency-flag {
+    width: 24px;
+    height: 16px;
+}
+
+.exchange-rate {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 10px;
+}
+
+.amount-input {
+    width: 100px;
+    text-align: right;
+    font-size: 16px;
+    padding: 5px;
+    margin-right: 10px;
+}

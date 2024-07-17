@@ -3,9 +3,19 @@ document.addEventListener('DOMContentLoaded', (event) => {
     const textExchange = document.querySelector('.exchange_input');
     const calcButton = document.getElementById('exchange_button');
 
-    calcButton.addEventListener('click', () => {
+    calcButton.addEventListener('click', async () => {
         // console.log('클릭됐삼');
         console.log(textInput.value);
+        try {
+            const response = await fetch('/exchange-rate');
+            if (!response.ok) {
+                throw new Error('Network response was not ok');
+            }
+            const data = await response.json();
+            textExchange.value = `${data.rate}`;
+        } catch (error) {
+            console.error('Fetch error:', error);
+        }
     });
 });
 

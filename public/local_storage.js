@@ -10,7 +10,7 @@ const reset_button = document.getElementById("reset_local")
 //     // mytable.
 // }))
 
-window.addEventListener('load',(()=>{
+window.addEventListener('load', (() => {
 
     const local_storage_array = getAllFromLocalStorage()
     //이제 local stoarge에서 꺼내오기. 
@@ -22,23 +22,21 @@ window.addEventListener('load',(()=>{
 
 }))
 
-reset_button.addEventListener('click', (()=> {
+reset_button.addEventListener('click', (() => {
     localStorage.clear()
     location.reload()
 }))
 
-function savetolocal(key,valfirst)
-{
+function savetolocal(key, valfirst) {
     const val = JSON.stringify(valfirst)
     let nowlocal = window.localStorage.length
-    if (nowlocal !== 0)
-    {
+    if (nowlocal !== 0) {
         nowlocal += val
     }
-    else{
+    else {
         nowlocal = val
     }
-    window.localStorage.setItem(key,val)
+    window.localStorage.setItem(key, val)
 
 }
 
@@ -48,7 +46,7 @@ xhr.onload = (() => {
     const response = JSON.parse(xhr.response)
     // console.log(response)
     // console.log(response.name,response.age)
-    savetolocal(getCurrentDateTime(),response)
+    savetolocal(getCurrentDateTime(), response)
     //local stoarge에 저장 끝. 
 
     const local_storage_array = getAllFromLocalStorage()
@@ -61,20 +59,19 @@ xhr.onload = (() => {
 })
 
 
-function getAllFromLocalStorage ()
-{
-    
+function getAllFromLocalStorage() {
+
     //이제, 거기서 빼오기
-    
+
     const keys = Object.keys(window.localStorage)
     // console.log(keys)
 
     const values = keys.map(key => {
         const value = window.localStorage.getItem(key);
         // console.log("haha",JSON.parse(value))
-        const parsedValue = JSON.parse(value); 
+        const parsedValue = JSON.parse(value);
         // console.log(valuearray[key]);
-        parsedValue.timestamp = key; 
+        parsedValue.timestamp = key;
         return parsedValue;
     });
 
@@ -85,14 +82,13 @@ function getAllFromLocalStorage ()
 
 }
 
-function testing()
-{   
-    xhr.open('POST','http://127.0.0.1:5000/giveme')
+function testing() {
+    xhr.open('POST', 'http://127.0.0.1:5000/giveme')
     xhr.setRequestHeader('Content-Type', 'application/json');
     xhr.send() //여기에 보낼 뭐 좀이따 추가
 }
 
-exchange_button.addEventListener('click',(() => {
+exchange_button.addEventListener('click', (() => {
     testing()
 
     const local_storage_array = getAllFromLocalStorage()
@@ -104,7 +100,7 @@ exchange_button.addEventListener('click',(() => {
 
 function generateTable(data) {
     const table = mytable.getElementsByTagName('tbody')[0];
-    
+
     table.innerHTML = "";
 
     data.forEach((item) => {
@@ -121,7 +117,7 @@ function generateTable(data) {
 function getCurrentDateTime() {
     const now = new Date();
     const year = now.getFullYear();
-    const month = String(now.getMonth() + 1).padStart(2, '0'); 
+    const month = String(now.getMonth() + 1).padStart(2, '0');
     const day = String(now.getDate()).padStart(2, '0');
     const hours = String(now.getHours()).padStart(2, '0');
     const minutes = String(now.getMinutes()).padStart(2, '0');
@@ -143,19 +139,18 @@ function getCurrentDateTime() {
 
 //change 버튼
 const change_button = document.getElementById('left_right_button')
-change_button.addEventListener('click',(()=>
-{
+change_button.addEventListener('click', (() => {
     console.log("우하하")
 
     let leftval = document.querySelector('.price_input').value
     let rightval = document.querySelector('.exchange_input').value
-    let temp 
+    let temp
 
     temp = leftval
     leftval = rightval
-    rightval= temp
+    rightval = temp
 
-    console.log(leftval,rightval)
+    console.log(leftval, rightval)
 
     document.querySelector('.price_input').value = leftval
     document.querySelector('.exchange_input').value = rightval
@@ -165,16 +160,16 @@ change_button.addEventListener('click',(()=>
     let leftselect = document.getElementById('price_select_option').value
     let rightselect = document.getElementById('exchange_select_option').value
     let temp2
-    console.log(leftselect,rightselect)
+    console.log(leftselect, rightselect)
 
     temp2 = leftselect
     leftselect = rightselect
-    rightselect= temp2
+    rightselect = temp2
 
-    console.log(leftselect,rightselect)
+    console.log(leftselect, rightselect)
 
-    document.getElementById('price_select_option').value =leftselect
-    document.getElementById('exchange_select_option').value =rightselect
+    document.getElementById('price_select_option').value = leftselect
+    document.getElementById('exchange_select_option').value = rightselect
 
 
 

@@ -322,7 +322,7 @@ section {
     background-color: transparent;
 }
 
-.last_mid{
+.last_mid {
     display: flex;
     justify-content: center;
 }
@@ -331,7 +331,7 @@ section {
     margin-top: 100px;
     display: flex;
     justify-content: center;
-    border-bottom: 1px solid #ccc; 
+    border-bottom: 1px solid #ccc;
     align-items: center;
     /* border-bottom: 1px solid #ccc;  */
     border-radius: 35px;
@@ -340,21 +340,22 @@ section {
 }
 
 #myTable {
-    border: 2PX solid #04aa6d; 
-    border-collapse: collapse; 
-    width: 80%; 
+    border: 2PX solid #04aa6d;
+    border-collapse: collapse;
+    width: 80%;
     font-family: "Noto Sans KR", sans-serif;
     border-radius: 35px;
     height: 60%;
     margin-top: 10px;
 }
 
-#myTable th, #myTable td {
-    border: 1px solid black; 
-    border : none;
-    padding: 8px; 
+#myTable th,
+#myTable td {
+    border: 1px solid black;
+    border: none;
+    padding: 8px;
     text-align: center;
-    border-radius: 10px; 
+    border-radius: 10px;
     font-family: "Noto Sans KR", sans-serif;
 }
 

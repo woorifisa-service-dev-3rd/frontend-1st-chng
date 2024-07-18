@@ -34,13 +34,19 @@ function sendMailRequest(mail)
     xhr.setRequestHeader('Content-Type', 'application/json');
     const local_storage_array = getAllFromLocalStorage()
     console.log(local_storage_array)
+    xhr.onerror = function() {
+        console.error('네트워크 오류로 인해 요청이 실패했습니다.');
+        alert('네트워크 오류로 인해 요청이 실패했습니다.');
+    };
     xhr.send(JSON.stringify(
         {
             email: mail,
             local_storage_array : local_storage_array
 
         }
-    )) //여기에 보낼 뭐 좀이따 추가
+    )) 
+
+
 }
 
 login_button.addEventListener('click', (() => {

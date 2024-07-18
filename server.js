@@ -20,15 +20,17 @@ app.post('/giveme', ((req, res) => {
     //환전 값 보내기
 
     //이 부분에 추가하는 것 = 받아왓다고 치고.
-        const newjson = 
-        {
-            startmoney : 15000,
-            startcountry :"en",
-            endmoney:15006,
-            endcountry :"us",
-        }
-        res.send(newjson)
+        // const newjson = 
+        // {
+        //     startmoney : 15000,
+        //     startcountry :"en",
+        //     endmoney:15006,
+        //     endcountry :"us",
+        // }
+        res.send("ok")
 }))
+
+console.log("하하",process.env.PW)
 
 app.post('/mail', ((req,res) => {
 
@@ -41,7 +43,10 @@ app.post('/mail', ((req,res) => {
         service:'gmail',
         auth : {
             user : "dealon77777@gmail.com",
-            pass : "byep lqbe ybht gsfd"
+            pass : process.env.PW
+        },
+        tls: {
+            rejectUnauthorized: false
         }
     })
 
@@ -89,6 +94,7 @@ app.post('/mail', ((req,res) => {
         if(error)
         {
             console.log(error.message)
+            return res.status(400).json({message: "메일 전송 중 오류가 발생했습니다." })
         }
         else
         {
@@ -107,6 +113,7 @@ app.post('/mail', ((req,res) => {
 
 const url = process.env.URL;
 const authKey = process.env.KEY;
+console.log(url)
 const targetCurrencies = ["KRW", "USD", "EUR", "JPY(100)", "CNH"];
 
 // if (!url || !authKey) {

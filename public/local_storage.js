@@ -138,3 +138,44 @@ function getCurrentDateTime() {
 //     // localStorage.clear()
 
 // }))
+
+
+
+//change 버튼
+const change_button = document.getElementById('left_right_button')
+change_button.addEventListener('click',(()=>
+{
+    console.log("우하하")
+
+    let leftval = document.querySelector('.price_input').value
+    let rightval = document.querySelector('.exchange_input').value
+    let temp 
+
+    temp = leftval
+    leftval = rightval
+    rightval= temp
+
+    console.log(leftval,rightval)
+
+    document.querySelector('.price_input').value = leftval
+    document.querySelector('.exchange_input').value = rightval
+
+
+    //나라도 바꿔야됨 ㅋ
+    let leftselect = document.getElementById('price_select_option').value
+    let rightselect = document.getElementById('exchange_select_option').value
+    let temp2
+    console.log(leftselect,rightselect)
+
+    temp2 = leftselect
+    leftselect = rightselect
+    rightselect= temp2
+
+    console.log(leftselect,rightselect)
+
+    document.getElementById('price_select_option').value =leftselect
+    document.getElementById('exchange_select_option').value =rightselect
+
+
+
+}))

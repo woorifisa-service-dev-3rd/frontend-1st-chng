@@ -135,5 +135,8 @@ header {
         
 
 }
-
-
+#left_right_button
+{
+    display: flex;
+    margin-bottom: 20px;
+}

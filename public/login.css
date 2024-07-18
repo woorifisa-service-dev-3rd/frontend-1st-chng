@@ -1,6 +1,6 @@
 html
 {
-    background-color: black;
+    background-color: white;
 }
 
 body {
@@ -14,14 +14,6 @@ body {
 
 }
 
-a:link{
-    color:#15F4EE;
-}
-
-a:visited {
-    color : rgb(50, 147, 143) ;
-}
-
 input, button{
     border-radius: 8px;
     border: 1px solid #c2bebe;
@@ -31,7 +23,7 @@ input, button{
 .header {
     display: flex;
     height: 97.03px;
-    border-bottom: 3px solid #15F4EE;
+    border-bottom: 3px solid #04aa6d;
     justify-content: center;
     box-sizing: border-box;
 }
@@ -55,17 +47,18 @@ input, button{
 }
 .loginlogo
 {
-    color : #15F4EE;;
+    color : #04aa6d;
     display: flex;
     font-family: 'Black Han Sans', sans-serif;
     font-size: 50px;
+    margin-left: 10px;
 }
 .xbutton
 {
     display: flex;
     border : white;
-    color : #15F4EE;
-    background-color: black;
+    color : #04aa6d;
+    background-color: white;
     font-size: 40px;
     /* flex-direction: column;
     align-items: center; */
@@ -73,7 +66,7 @@ input, button{
 
 
 .xbutton a:visited {
-    color: #15F4EE;/* 방문된 상태일 때의 색상 */
+    color: #04aa6d;/* 방문된 상태일 때의 색상 */
 }
 /* .main
 {
@@ -93,8 +86,8 @@ input, button{
     justify-content: center;
     align-items: center;
     padding: 0px 32px;
-    background-color: black;
-    color : #15F4EE;
+    background-color: white;
+    color : #04aa6d;
     
 }   
 .Welcomeback
@@ -105,6 +98,7 @@ input, button{
     width : 486px;
     height : 31.72px;
     box-sizing: border-box;
+    margin-right: 20px;
     justify-content: center;
 }
 
@@ -116,6 +110,8 @@ input, button{
     margin-bottom: 8px;
     width : 486px;
     height : 40px;
+    margin-right: 30px;
+    margin-top : 15px;
     justify-content: center;
 }
 .signupurl
@@ -140,7 +136,7 @@ input, button{
 
 .emailbox:hover, .passwordbox:hover
 {
-    border : 6px solid #15F4EE;
+    border : 6px solid #04aa6d
 }
 
 .loginbutton
@@ -150,14 +146,14 @@ input, button{
     width : 486px;
     height : 48px;
     font-style: black;
-    background-color: #15F4EE ;
+    background-color: #04aa6d;
     border: white;
     font-weight: bold;
 }
 
 .loginbutton:hover
 {
-    background-color:hsl(178, 100%, 67%) ;
+    background-color:#04aa6d;
 }
 
 .problem

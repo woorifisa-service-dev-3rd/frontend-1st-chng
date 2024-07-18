@@ -38,6 +38,8 @@ section {
     flex-direction: column;
     justify-content: center 
     height: 260px;
+    justify-content: center #D9EEE1;
+    height: 260px;
     width: 1000px;
     border-radius: 35px;
     margin: 10px;

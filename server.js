@@ -1,19 +1,110 @@
+// import HTTP from 'superagent';
 import express, { json } from 'express';
+// import cors from 'cors';
+import cors from 'cors';
 import HTTP from 'superagent';
+import bodyParser from 'body-parser';
+import nodemailer from 'nodemailer';
 import { config } from 'dotenv';
 config();
 
-// SSL 인증서 검증 비활성화
-// process.env.NODE_TLS_REJECT_UNAUTHORIZED = '0';
-
-const app = express();
-
+const app = express();  
+app.use(json())
+app.use(cors())
 app.use(express.static('public'));
-app.use(json());
+app.use(bodyParser.json());
 
-const url = process.env.URL;
-const authKey = process.env.KEY;
+//이 로직을, 만든 로직에 추가 해야 함.
+app.post('/giveme', ((req, res) => {
+
+    //환전 값 보내기
+
+    //이 부분에 추가하는 것 = 받아왓다고 치고.
+        const newjson = 
+        {
+            startmoney : 15000,
+            startcountry :"en",
+            endmoney:15006,
+            endcountry :"us",
+        }
+        res.send(newjson)
+}))
+
+app.post('/mail', ((req,res) => {
+
+    const { email } = req.body;
+    const { local_storage_array } = req.body
+
+    console.log("하하", local_storage_array)
+    
+    const transporter = nodemailer.createTransport({
+        service:'gmail',
+        auth : {
+            user : "dealon77777@gmail.com",
+            pass : "byep lqbe ybht gsfd"
+        }
+    })
+
+    const mailOptions = {
+        from: 'dealon77777@gmail.com',
+        to: email, //받아오기
+        subject: 'Chng에서 안내 메세지 드립니다.',
+        text: 'chng에서 보냈습니다', // 변경
+        html: `
+        <div class="mytable_container">
+            <table id="myTable" border="1">
+                <thead>
+                    <tr>
+                        <th>입력 금액</th>
+                        <th>기준</th>
+                        <th>환전 금액</th>
+                        <th>기준</th>
+                        <th>기록 날짜</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    ${local_storage_array.map(item => `
+                        <tr>
+                            <td>${item.startmoney}</td>
+                            <td>${item.startcountry}</td>
+                            <td>${item.endmoney}</td>
+                            <td>${item.endcountry}</td>
+                            <td>${item.timestamp}</td>
+                        </tr>
+                    `).join('')}
+                </tbody>
+            </table>
+        </div>
+
+        <br> </br>
+
+        <div>
+            <div> chng에서 구매하신 구매 내역을 보내드립니다. 감사합니다! </div>
+        </div>
+    `
+    };
+
+    console.log(email)
+    transporter.sendMail(mailOptions, (error, info) => {
+        if(error)
+        {
+            console.log(error.message)
+        }
+        else
+        {
+            res.status(200).send('Email sent: ' + info.response);
+            //이메일 보낸거 완료.
+        }
+
+    });
+}))
+
+// const url = process.env.URL;
+// const authKey = process.env.KEY;
 const targetCurrencies = ["KRW", "USD", "EUR", "JPY(100)", "CNH"];
+
+const url = 'https://www.koreaexim.go.kr/site/program/financial/exchangeJSON';
+const authKey = 'VNQFbv2fWY2SVWFznbobAXOxuCQP7Y8u';
 
 // if (!url || !authKey) {
 //     console.error('URL or AUTH_KEY is not defined in .env file');

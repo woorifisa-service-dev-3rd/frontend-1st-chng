@@ -271,3 +271,24 @@ section {
     font-weight: bold;
     background-color: transparent;
 }
+
+.mytable_container{
+    margin-top: 100px;
+    display: flex;
+    justify-content: center;
+    border-bottom: 1px solid #ccc; 
+}
+
+#myTable {
+    border: 1px solid black; 
+    border-collapse: collapse; 
+    width: 100%; 
+    font-family: "Noto Sans KR", sans-serif;
+}
+
+#myTable th, #myTable td {
+    border: 1px solid black; 
+    padding: 8px; 
+    text-align: center; 
+    font-family: "Noto Sans KR", sans-serif;
+}

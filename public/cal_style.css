@@ -344,17 +344,17 @@ section {
     border-collapse: collapse; 
     width: 80%; 
     font-family: "Noto Sans KR", sans-serif;
-    border-radius: 35px;
+    border-radius: 25%;
     height: 60%;
     margin-top: 10px;
 }
 
 #myTable th, #myTable td {
-    border: 1px solid black; 
+    /* border: 1px solid black;  */
     border : none;
     padding: 8px; 
     text-align: center;
-    border-radius: 10px; 
+    border-radius: 25px; 
     font-family: "Noto Sans KR", sans-serif;
 }
 

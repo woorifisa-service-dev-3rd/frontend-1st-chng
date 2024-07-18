@@ -344,7 +344,7 @@ section {
     border-collapse: collapse;
     width: 80%;
     font-family: "Noto Sans KR", sans-serif;
-    border-radius: 35px;
+    border-radius: 25%;
     height: 60%;
     margin-top: 10px;
 }

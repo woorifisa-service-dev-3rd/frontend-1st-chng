@@ -99,15 +99,12 @@ app.post('/mail', ((req,res) => {
     });
 }))
 
-
-// config();
-
-
-
-
-const url = process.env.URL;
-const authKey = process.env.KEY;
+// const url = process.env.URL;
+// const authKey = process.env.KEY;
 const targetCurrencies = ["KRW", "USD", "EUR", "JPY(100)", "CNH"];
+
+const url = 'https://www.koreaexim.go.kr/site/program/financial/exchangeJSON';
+const authKey = 'VNQFbv2fWY2SVWFznbobAXOxuCQP7Y8u';
 
 // if (!url || !authKey) {
 //     console.error('URL or AUTH_KEY is not defined in .env file');

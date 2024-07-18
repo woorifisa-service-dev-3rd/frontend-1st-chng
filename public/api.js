@@ -2,6 +2,13 @@
 const textInput = document.querySelector('.price_input');
 const textExchange = document.querySelector('.exchange_input');
 const calcButton = document.getElementById('exchange_button');
+let timeText = document.querySelector('.bottom_time');
+let today = new Date();
+// timeText.textContent = today.toLocaleString()+' 기준';
+timeText.textContent = `${new Date()}`;
+
+let bottomText = document.querySelector('.bottom_output');
+// bottomText.textContent = '';
 
 const inputSelect = document.querySelector('#price_select_option');
 let inputValue = inputSelect.options[inputSelect.selectedIndex].value;
@@ -9,17 +16,17 @@ let inputValue = inputSelect.options[inputSelect.selectedIndex].value;
 const outputSelect = document.querySelector('#exchange_select_option');
 let outputValue = outputSelect.options[outputSelect.selectedIndex].value;
 
-console.log('inputValue:', inputValue);
-console.log('outputValue:', outputValue);
+console.log('기준 화폐:', inputValue);
+console.log('변환 화폐:', outputValue);
 
 inputSelect.addEventListener('change', () => {
     inputValue = inputSelect.options[inputSelect.selectedIndex].value;
-    console.log('inputValue:', inputValue);
+    console.log('기준 화폐:', inputValue);
 })
 
 outputSelect.addEventListener('change', () => {
     outputValue = outputSelect.options[outputSelect.selectedIndex].value;
-    console.log('outputValue:', outputValue);
+    console.log('변환 화폐:', outputValue);
 })
 
 calcButton.addEventListener('click', async () => {
@@ -52,7 +59,10 @@ calcButton.addEventListener('click', async () => {
         }
         const data = await response.json();
         // textExchange.value = `${data.rate}`;
-        textExchange.value = `${comma(parseFloat(data.convertedAmount.toFixed(6)))}`;
+        const finalData = `${comma(parseFloat(data.convertedAmount.toFixed(6)))}`;
+        textExchange.value = finalData;
+        bottomText.textContent = `${amount} ${toCurrency} = ${finalData} ${fromCurrency}`;
+
     } catch (error) {
         console.error('Fetch error:', error);
     }

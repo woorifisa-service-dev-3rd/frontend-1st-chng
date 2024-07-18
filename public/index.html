@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="header.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Black+Han+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="cal_style.css">
+    <script defer src="local_storage.js"> </script>
+    <script defer src="api.js"></script>
+    <script defer src="reversal.js"></script>
+    <script></script>
+</head>
+
+<body>
+    <header>
+        <div class="header_bar">
+            <div class="header_bar_top">
+                <div class="header_bar_top_left">
+                    <a class="mainlogo">chng</a>
+                </div>
+                <div class="header_bar_top_right">
+                    <form action="login.html" method="get">
+                    </form>
+                    <button id="dark_button-right">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="70" height="30" fill="currentColor"
+                            class="bi bi-circle-half" viewBox="0 0 16 16">
+                            <path d="M8 15A7 7 0 1 0 8 1zm0 1A8 8 0 1 1 8 0a8 8 0 0 1 0 16" />1
+                        </svg>
+                    </button>
+                </div>
+            </div>
+            <div class="header_bar_bottom">
+                <a class="calculator_button"></a>
+
+            </div>
+        </div>
+    </header>
+    <section>
+        <div class="cal_title">
+            <h1>환율계산기</h1>
+        </div>
+
+        <div class="cal_box">
+            <div class="cal_box_top">
+                <div class="cal_box_top_left">
+                    <div style="margin-left: 5px;">금액</div>
+                    <div class="price_box">
+                        <input type="text" maxlength="15" onkeyup="inputNumberFormat(this);" placeholder=""
+                            class="price_input">
+                        <!-- <div class="price_select">
+                            <button class="price_country_button">
+                                <img src="https://wise.com/web-art/assets/flags/usd.svg" alt="USD flag"
+                                    class="currency_flag">
+                                USD
+                                <span class="dropdown-arrow">▼</span>
+                            </button>
+                            <div class="dropdown">
+                                <div class="dropdown_content">
+                                    <a href="#" class="currency_option">
+                                        <img src="https://wise.com/web-art/assets/flags/usd.svg" alt="USD 플래그"
+                                            class="currency_flag">
+                                        EUR
+                                    </a>
+                                    <a href="https://wise.com/web-art/assets/flags/usd.svg"
+                                        class="currency_option">USD</a>
+                                    <a href="https://wise.com/web-art/assets/flags/eur.svg"
+                                        class="currency_option">EUR</a>
+                                    <a href="https://wise.com/web-art/assets/flags/krw.svg"
+                                        class="currency_option">KRW</a>
+                                    <a href="https://wise.com/web-art/assets/flags/jpy.svg"
+                                        class="currency_option">JPY</a>
+                                    <a href="https://wise.com/web-art/assets/flags/cny.svg"
+                                        class="currency_option">CNY</a>
+                                </div>
+                            </div>
+                            <div class="exchange_select">
+                                <select name="" id="select_option">
+                                    <option value="usd">USD</option>
+                                    <option value="eur">EUR</option>
+                                    <option value="krw">KRW</option>
+                                    <option value="jpy">JPY</option>
+                                    <option value="cny">CNY</option>
+                                </select>
+                            </div>
+                        </div> -->
+                        <div class="price_select">
+                            <select name="" id="price_select_option">
+                                <option value="usd">USD</option>
+                                <option value="eur">EUR</option>
+                                <option value="krw">KRW</option>
+                                <option value="jpy">JPY</option>
+                                <option value="cny">CNY</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="cal_box_top_mid">
+                    <!-- <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSuRCSp_X1MI5IcpErk1t5U4rzWGvSyRSojOQ&s" -->
+                    <!-- alt="스위치 아이콘"> -->
+                    <div class="container">
+                        <label for="file-upload" class="custom-file-upload">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="50" fill="currentColor"
+                                class="bi bi-arrow-left-right" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd"
+                                    d="M1 11.5a.5.5 0 0 0 .5.5h11.793l-3.147 3.146a.5.5 0 0 0 .708.708l4-4a.5.5 0 0 0 0-.708l-4-4a.5.5 0 0 0-.708.708L13.293 11H1.5a.5.5 0 0 0-.5.5m14-7a.5.5 0 0 1-.5.5H2.707l3.147 3.146a.5.5 0 1 1-.708.708l-4-4a.5.5 0 0 1 0-.708l4-4a.5.5 0 1 1 .708.708L2.707 4H14.5a.5.5 0 0 1 .5.5" />
+                            </svg>
+                        </label>
+                        <input id="file-upload" type="file" accept="image/*" style="display: none;"
+                            onchange="previewImage(event)">
+                        <img id="preview" src="" alt="Image Preview" style="display: none;">
+                    </div>
+
+                </div>
+                <div class="cal_box_top_right">
+                    <div style="margin-left: 5px;">환전</div>
+                    <div class="exchange_box">
+                        <input type="text" maxlength="15" onkeyup="inputNumberFormat(this);" placeholder=""
+                            class="exchange_input" disabled>
+
+                        <!-- <div class="exchange_select">
+                            <button class="exchange_country_button">
+                                <img src="https://wise.com/web-art/assets/flags/krw.svg" alt="KRW flag"
+                                    class="currency_flag">
+                                KRW
+                                <span class="dropdown-arrow">▼</span>
+                            </button>
+                            <div class="dropdown">
+                                <div class="dropdown_content">
+                                    <a href="https://wise.com/web-art/assets/flags/usd.svg"
+                                        class="currency_option">USD</a>
+                                    <a href="https://wise.com/web-art/assets/flags/eur.svg"
+                                        class="currency_option">EUR</a>
+                                    <a href="https://wise.com/web-art/assets/flags/krw.svg"
+                                        class="currency_option">KRW</a>
+                                    <a href="https://wise.com/web-art/assets/flags/jpy.svg"
+                                        class="currency_option">JPY</a>
+                                    <a href="https://wise.com/web-art/assets/flags/cny.svg"
+                                        class="currency_option">CNY</a>
+                                </div>
+                            </div>
+                        </div> -->
+
+                        <div class="exchange_select">
+                            <select name="" id="exchange_select_option">
+                                <option value="krw">KRW</option>
+                                <option value="usd">USD</option>
+                                <option value="eur">EUR</option>
+                                <option value="jpy">JPY</option>
+                                <option value="cny">CNY</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="cal_box_bottom">
+                <div class="cal_box_bottom_left">
+                    <div class="bottom_output">$1.000 USD = ₩1,382 KRW</div>
+                    <div class="bottom_time">Mid-market exchange rate at 09:57</div>
+                </div>
+                <div class="cal_box_bottom_right">
+                    <div>
+                        <button class="exchange_button" id="exchange_button">환율 계산</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- <table id="myTable">
+        <thead>
+            <tr>
+                <th>입력 금액</th>
+                <th>기준</th>
+                <th>환전 금액</th>
+                <th>기준</th>
+                <th>기록 날짜</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+        <td>John</td>
+        <td>28</td>
+      </tr>
+      <tr>
+        <td>Jane</td>
+        <td>25</td>
+      </tr>
+        </tbody>
+    </table> -->
+
+</body>
+
+</html>

@@ -30,7 +30,7 @@ app.post('/giveme', ((req, res) => {
         res.send("ok")
 }))
 
-console.log("하하",process.env.PW)
+// console.log("하하",process.env.PW)
 
 app.post('/mail', ((req,res) => {
 
@@ -115,6 +115,8 @@ const url = process.env.URL;
 const authKey = process.env.KEY;
 console.log(url)
 const targetCurrencies = ["KRW", "USD", "EUR", "JPY(100)", "CNH"];
+
+
 
 // if (!url || !authKey) {
 //     console.error('URL or AUTH_KEY is not defined in .env file');

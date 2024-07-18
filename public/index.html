@@ -1,18 +1,20 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="cal_style.css">
     <link rel="stylesheet" href="header.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Black+Han+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="cal_style.css">
     <script defer src="local_storage.js"> </script>
     <script defer src="api.js"></script>
+    <script defer src="reversal.js"></script>
+    <script></script>
 </head>
 
 <body>
@@ -21,17 +23,22 @@
             <div class="header_bar_top">
                 <div class="header_bar_top_left">
                     <a class="mainlogo">chng</a>
-                    <a class="per_or_bus_button">
-                        <button class="person_button">개인</button>
-                        <button class="business_button">비즈니스</button>
-                    </a>
                 </div>
                 <div class="header_bar_top_right">
-                    <button type="submit" class="reset_local" id="reset_local">초기화</button>
+                    <button type="submit" class="reset_local" id="reset_local">Reset</button>
 
                     <form action="login.html" method="get">
-                        <button type="submit" class="login_btn">메일</button>
+                        <button type="submit" class="login_btn">Mail</button>
                     </form>
+
+                    <button id="dark_button-right">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor"
+                            class="bi bi-circle-half" viewBox="0 0 16 16">
+                            <path d="M8 15A7 7 0 1 0 8 1zm0 1A8 8 0 1 1 8 0a8 8 0 0 1 0 16" />
+                        </svg>
+                    </button>
+
+
                 </div>
             </div>
             <div class="header_bar_bottom">
@@ -50,7 +57,8 @@
                 <div class="cal_box_top_left">
                     <div style="margin-left: 5px;">금액</div>
                     <div class="price_box">
-                        <input type="text" maxlength="15" onkeyup="inputNumberFormat(this);" placeholder="" class="price_input">
+                        <input type="text" maxlength="15" onkeyup="inputNumberFormat(this);" placeholder=""
+                            class="price_input">
                         <!-- <div class="price_select">
                             <button class="price_country_button">
                                 <img src="https://wise.com/web-art/assets/flags/usd.svg" alt="USD flag"
@@ -91,7 +99,7 @@
                             <select name="" id="price_select_option">
                                 <option value="usd">USD</option>
                                 <option value="eur">EUR</option>
-                                <option value="krw" >KRW</option>
+                                <option value="krw">KRW</option>
                                 <option value="jpy">JPY</option>
                                 <option value="cny">CNY</option>
                             </select>
@@ -118,8 +126,9 @@
                 <div class="cal_box_top_right">
                     <div style="margin-left: 5px;">환전</div>
                     <div class="exchange_box">
-                        <input type="text" maxlength="15" onkeyup="inputNumberFormat(this);" placeholder="" class="exchange_input" disabled>
-                        
+                        <input type="text" maxlength="15" onkeyup="inputNumberFormat(this);" placeholder=""
+                            class="exchange_input" disabled>
+
                         <!-- <div class="exchange_select">
                             <button class="exchange_country_button">
                                 <img src="https://wise.com/web-art/assets/flags/krw.svg" alt="KRW flag"
@@ -167,7 +176,7 @@
                 </div>
             </div>
         </div>
-</section>
+    </section>
 
 <div class = "last_mid">
 <div class = "mytable_container">

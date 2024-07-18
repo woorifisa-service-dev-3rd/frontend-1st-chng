@@ -1,6 +1,6 @@
 header {
     font-family: "Noto Sans KR", sans-serif;
-    color:
+
 }
 
 .header_bar {
@@ -87,7 +87,7 @@ header {
     padding-left: 100px;
     padding-top: 7px;
     padding-bottom: 7px;
-    background-color: #282a35;
+    background-color: #D9EEE1;
     color: black;
     font-weight: bold;
 }
@@ -103,6 +103,7 @@ header {
 .header_bar_top_right {
     display: flex;
     justify-content: flex-end;
+
 }
 
 .header_bar_top_right a {
@@ -119,14 +120,16 @@ header {
     border-radius: 15px;
     width: 70px;
     color: white;
-    
+    margin: 10px;
+
+
 }
 
 .reset_local {
 
     background-color: #04aa6d;
     font-weight: bold;
-    font-size:15px;
+    font-size: 15px;
     border: 0;
     height: 30px;
     border-radius: 15px;

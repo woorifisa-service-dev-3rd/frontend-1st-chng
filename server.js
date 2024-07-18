@@ -39,7 +39,7 @@ app.post('/mail', ((req,res) => {
         service:'gmail',
         auth : {
             user : "dealon77777@gmail.com",
-            pass : "byep lqbe ybht gsfd"
+            pass : "후에설정"
         }
     })
 

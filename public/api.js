@@ -32,12 +32,14 @@ outputSelect.addEventListener('change', () => {
     console.log('변환 화폐:', outputValue);
 })
 
+let fromCurrency = outputValue;
+let toCurrency = inputValue;
+
 calcButton.addEventListener('click', async () => {
     // console.log('클릭됐삼');
     console.log(textInput.value);
 
-    const fromCurrency = outputValue;
-    const toCurrency = inputValue;
+    
     const amount = parseFloat(uncomma(textInput.value));
     if (isNaN(amount)) {
         alert('값을 입력해 주세요.');
@@ -248,6 +250,12 @@ change_button.addEventListener('click',(()=>
 
     document.getElementById('price_select_option').value =leftselect
     document.getElementById('exchange_select_option').value =rightselect
+
+    let temp3
+    temp3 = fromCurrency;
+    fromCurrency=  toCurrency
+    toCurrency=temp3;
+
 
 
 

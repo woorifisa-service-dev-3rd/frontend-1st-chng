@@ -113,9 +113,9 @@ input, button{
     display: flex;
     margin : 0px;
     margin-top : 8px;
-    margin-bottom: 16px;
+    margin-bottom: 8px;
     width : 486px;
-    height : 21.69px;
+    height : 40px;
     justify-content: center;
 }
 .signupurl

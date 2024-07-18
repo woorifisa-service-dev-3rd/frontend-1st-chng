@@ -119,4 +119,21 @@ header {
     border-radius: 15px;
     width: 70px;
     color: white;
+    
 }
+
+.reset_local {
+
+    background-color: #04aa6d;
+    font-weight: bold;
+    font-size:15px;
+    border: 0;
+    height: 30px;
+    border-radius: 15px;
+    width: 70px;
+    color: white;
+        
+
+}
+
+

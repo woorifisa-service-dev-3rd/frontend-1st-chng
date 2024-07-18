@@ -1,6 +1,6 @@
 const exchange_button = document.getElementById("exchange_button")
-// const mytable = document.getElementById("myTable")
-const login_button = document.querySelector(".login_btn")
+const mytable = document.getElementById("myTable")
+const reset_button = document.getElementById("reset_local")
 // const docu = document.querySelector("body")
 
 // docu.addEventListener('click', (() => {
@@ -10,8 +10,26 @@ const login_button = document.querySelector(".login_btn")
 //     // mytable.
 // }))
 
-function savetolocal(key,val)
+window.addEventListener('load',(()=>{
+
+    const local_storage_array = getAllFromLocalStorage()
+    //이제 local stoarge에서 꺼내오기. 
+
+    console.log(local_storage_array)
+
+    //만든 걸로 table 만들기
+    generateTable(local_storage_array)
+
+}))
+
+reset_button.addEventListener('click', (()=> {
+    localStorage.clear()
+    location.reload()
+}))
+
+function savetolocal(key,valfirst)
 {
+    const val = JSON.stringify(valfirst)
     let nowlocal = window.localStorage.length
     if (nowlocal !== 0)
     {
@@ -22,58 +40,82 @@ function savetolocal(key,val)
     }
     window.localStorage.setItem(key,val)
 
-    // let newrow = mytable.insertRow(-1)
-    // let cell1 = newrow.insertCell(0)
-    // let cell2 = newrow.insertCell(1)
-    // let cell3 = newrow.insertCell(2)
-    // let cell4 = newrow.insertCell(3)
-    // let cell5 = newrow.insertCell(4)
-
-    // cell1.innerHTML = val.startmoney;
-    // cell2.innerHTML = val.startcountry;
-    // cell3.innerHTML = val.endmoney;
-    // cell4.innerHTML = val.endcountry;
-    // cell5.innerHTML = key;
-    // console.log(val)
-
 }
 
 const xhr = new XMLHttpRequest();
 
 xhr.onload = (() => {
-    const response = JSON.parse(xhr.responseText)
+    const response = JSON.parse(xhr.response)
+    // console.log(response)
     // console.log(response.name,response.age)
     savetolocal(getCurrentDateTime(),response)
     //local stoarge에 저장 끝. 
 
+    const local_storage_array = getAllFromLocalStorage()
+    //이제 local stoarge에서 꺼내오기. 
+
+    console.log(local_storage_array)
+
+    //만든 걸로 table 만들기
+    generateTable(local_storage_array)
+})
+
+
+function getAllFromLocalStorage ()
+{
+    
     //이제, 거기서 빼오기
     
     const keys = Object.keys(window.localStorage)
+    // console.log(keys)
 
-    const valuearray = {}
-
-    keys.forEach(key => {
+    const values = keys.map(key => {
         const value = window.localStorage.getItem(key);
-        console.log("haha",JSON.parse(value))
-        valuearray[key] = JSON.parse(value); // 문자열을 JSON 객체로 변환
-        console.log(valuearray[key]);
+        // console.log("haha",JSON.parse(value))
+        const parsedValue = JSON.parse(value); 
+        // console.log(valuearray[key]);
+        parsedValue.timestamp = key; 
+        return parsedValue;
     });
 
-    console.log(valuearray);
-    console.log(valuearray)
-})
+    // console.log("결론", valuearray);
+
+
+    return values || [];
+
+}
 
 function testing()
 {   
-    xhr.open('POST','http://localhost:3000/giveme')
+    xhr.open('POST','http://127.0.0.1:5000/giveme')
     xhr.setRequestHeader('Content-Type', 'application/json');
     xhr.send() //여기에 보낼 뭐 좀이따 추가
 }
 
 exchange_button.addEventListener('click',(() => {
     testing()
-    console.log("병합?")
+
+    const local_storage_array = getAllFromLocalStorage()
+    //이제 local stoarge에서 꺼내오기. 
+
+    //만든 걸로 table 만들기
+    generateTable(local_storage_array)
 }))
+
+function generateTable(data) {
+    const table = mytable.getElementsByTagName('tbody')[0];
+    
+    table.innerHTML = "";
+
+    data.forEach((item) => {
+        const row = table.insertRow();
+        row.insertCell(0).appendChild(document.createTextNode(item.startmoney));
+        row.insertCell(1).appendChild(document.createTextNode(item.startcountry));
+        row.insertCell(2).appendChild(document.createTextNode(item.endmoney));
+        row.insertCell(3).appendChild(document.createTextNode(item.endcountry));
+        row.insertCell(4).appendChild(document.createTextNode(item.timestamp));
+    });
+}
 
 
 function getCurrentDateTime() {
@@ -92,6 +134,7 @@ function getCurrentDateTime() {
 //     localStorage.clear()
 // })
 
-login_button.addEventListener('click',(() => {
-    localStorage.clear()
-}))
+// login_button.addEventListener('click',(() => {
+//     // localStorage.clear()
+
+// }))

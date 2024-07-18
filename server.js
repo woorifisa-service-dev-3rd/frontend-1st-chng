@@ -3,16 +3,17 @@ import express, { json } from 'express';
 // import cors from 'cors';
 import cors from 'cors';
 import HTTP from 'superagent';
-// import { config } from 'dotenv';
+import bodyParser from 'body-parser';
+import nodemailer from 'nodemailer';
 
-
-const app2 = express();  
-app2.use(json())
-app2.use(cors())
-app2.use(express.static('public'));
+const app = express();  
+app.use(json())
+app.use(cors())
+app.use(express.static('public'));
+app.use(bodyParser.json());
 
 //이 로직을, 만든 로직에 추가 해야 함.
-app2.post('/giveme', ((req, res) => {
+app.post('/giveme', ((req, res) => {
 
     //환전 값 보내기
 
@@ -27,20 +28,78 @@ app2.post('/giveme', ((req, res) => {
         res.send(newjson)
 }))
 
+app.post('/mail', ((req,res) => {
 
+    const { email } = req.body;
+    const { local_storage_array } = req.body
 
-app2.listen(3000, () => {
-    console.log("http://127.0.0.1:3000 가 실행 중입니다.");
-});
+    console.log("하하", local_storage_array)
+    
+    const transporter = nodemailer.createTransport({
+        service:'gmail',
+        auth : {
+            user : "dealon77777@gmail.com",
+            pass : "후에설정"
+        }
+    })
 
+    const mailOptions = {
+        from: 'dealon77777@gmail.com',
+        to: email, //받아오기
+        subject: 'Chng에서 안내 메세지 드립니다.',
+        text: 'chng에서 보냈습니다', // 변경
+        html: `
+        <div class="mytable_container">
+            <table id="myTable" border="1">
+                <thead>
+                    <tr>
+                        <th>입력 금액</th>
+                        <th>기준</th>
+                        <th>환전 금액</th>
+                        <th>기준</th>
+                        <th>기록 날짜</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    ${local_storage_array.map(item => `
+                        <tr>
+                            <td>${item.startmoney}</td>
+                            <td>${item.startcountry}</td>
+                            <td>${item.endmoney}</td>
+                            <td>${item.endcountry}</td>
+                            <td>${item.timestamp}</td>
+                        </tr>
+                    `).join('')}
+                </tbody>
+            </table>
+        </div>
+
+        <br> </br>
+
+        <div>
+            <div> chng에서 구매하신 구매 내역을 보내드립니다. 감사합니다! </div>
+        </div>
+    `
+    };
+
+    console.log(email)
+    transporter.sendMail(mailOptions, (error, info) => {
+        if(error)
+        {
+            console.log(error.message)
+        }
+        else
+        {
+            res.status(200).send('Email sent: ' + info.response);
+            //이메일 보낸거 완료.
+        }
+
+    });
+}))
 
 
 // config();
 
-const app = express();  
-app.use(json())
-app.use(cors())
-app.use(express.static('public'));
 
 
 

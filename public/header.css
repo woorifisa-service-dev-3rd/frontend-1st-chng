@@ -135,6 +135,11 @@ header {
     border-radius: 15px;
     width: 70px;
     color: white;
+        
 
-
+}
+#left_right_button
+{
+    display: flex;
+    margin-bottom: 20px;
 }

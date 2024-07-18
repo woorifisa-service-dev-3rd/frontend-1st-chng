@@ -36,8 +36,8 @@ section {
 .cal_box {
     display: flex;
     flex-direction: column;
-    justify-content: center background-color: #D9EEE1;
-    space beat height: 260px;
+    justify-content: center #D9EEE1;
+    height: 260px;
     width: 1000px;
     border-radius: 35px;
     margin: 10px;

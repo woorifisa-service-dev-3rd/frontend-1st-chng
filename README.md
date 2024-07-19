@@ -11,7 +11,7 @@
 
 ### 프로젝트 시연 영상
 
-![Uploading bandicam2024-07-1909-30-09-699-ezgif.com-video-to-gif-converter.gif…]()
+![bandicam2024-07-1909-30-09-699-ezgif com-video-to-gif-converter](https://github.com/user-attachments/assets/d009bed9-0213-4e7d-8dfb-ac2f047f2fd6)
 
 
 

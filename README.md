@@ -1,6 +1,7 @@
 ### 프로젝트명
 
-![chng_mainlogo](https://github.com/woorifisa-service-dev-3rd/frontend-1st-chng/assets/128590006/1b0e79cd-1281-42cb-9202-755808c9ddcd)
+![image](https://github.com/user-attachments/assets/71904e49-2002-445e-aaeb-6038e2c47832)
+
 
 **chng(챈지)**
 

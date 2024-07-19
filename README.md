@@ -11,7 +11,8 @@
 
 ### 프로젝트 시연 영상
 
-![1  시연자료](https://github.com/woorifisa-service-dev-3rd/frontend-1st-chng/assets/123541776/a8f7bc09-633b-4896-a52f-cc5346294c94)
+![Uploading bandicam2024-07-1909-30-09-699-ezgif.com-video-to-gif-converter.gif…]()
+
 
 
 

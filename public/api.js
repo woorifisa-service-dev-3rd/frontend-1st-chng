@@ -13,10 +13,10 @@ timeText.textContent = `${new Date()}`;
 let bottomText = document.querySelector('.bottom_output');
 // bottomText.textContent = '';
 
-const inputSelect = document.querySelector('#price_select_option');
+let inputSelect = document.querySelector('#price_select_option');
 let inputValue = inputSelect.options[inputSelect.selectedIndex].value;
 
-const outputSelect = document.querySelector('#exchange_select_option');
+let outputSelect = document.querySelector('#exchange_select_option');
 let outputValue = outputSelect.options[outputSelect.selectedIndex].value;
 
 console.log('기준 화폐:', inputValue);
@@ -38,6 +38,9 @@ let toCurrency = inputValue;
 calcButton.addEventListener('click', async () => {
     // console.log('클릭됐삼');
     console.log(textInput.value);
+
+    fromCurrency = outputValue;
+    toCurrency = inputValue;
 
     
     const amount = parseFloat(uncomma(textInput.value));
@@ -251,11 +254,23 @@ change_button.addEventListener('click',(()=>
     document.getElementById('price_select_option').value =leftselect
     document.getElementById('exchange_select_option').value =rightselect
 
+    fromCurrency = outputValue;
+    toCurrency = inputValue;
+
     let temp3
     temp3 = fromCurrency;
     fromCurrency=  toCurrency
     toCurrency=temp3;
 
+    outputValue = fromCurrency
+    inputValue = toCurrency
+
+    
+    // const amount = parseFloat(uncomma(textInput.value));
+    // const data = await response.json();
+    // // textExchange.value = `${data.rate}`;
+    // const finalData = `${comma(parseFloat(data.convertedAmount.toFixed(6)))}`;
+    // bottomText.textContent = `${amount} ${toCurrency} = ${finalData} ${fromCurrency}`;
 
 
 

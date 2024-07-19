@@ -13,7 +13,8 @@
 
 ![bandicam2024-07-1909-30-09-699-ezgif com-video-to-gif-converter](https://github.com/user-attachments/assets/d009bed9-0213-4e7d-8dfb-ac2f047f2fd6)
 
-
+### 메일 전송 결과
+![image](https://github.com/user-attachments/assets/47bb866a-ed2b-4b9d-aa4d-e76e7c8ccccf)
 
 
 ### 프로젝트 개요 및 목적

@@ -1,20 +1,20 @@
-html
-{
+html {
     background-color: white;
 }
 
 body {
-    margin : 0;
+    margin: 0;
 }
 
 
-*{
+* {
     box-sizing: border-box;
     font-family: 'Noto Sans KR', sans-serif;
 
 }
 
-input, button{
+input,
+button {
     border-radius: 8px;
     border: 1px solid #c2bebe;
     background-color: white;
@@ -34,30 +34,30 @@ input, button{
     padding: 24px;
     width: 1164px;
     height: 96px;
-    box-sizing: border-box; 
+    box-sizing: border-box;
     justify-content: flex-end;
 }
-.logobutton-container
-{
-    width : 642px;
+
+.logobutton-container {
+    width: 642px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
 }
-.loginlogo
-{
-    color : #04aa6d;
+
+.loginlogo {
+    color: #04aa6d;
     display: flex;
     font-family: 'Black Han Sans', sans-serif;
     font-size: 50px;
     margin-left: 10px;
 }
-.xbutton
-{
+
+.xbutton {
     display: flex;
-    border : white;
-    color : #04aa6d;
+    border: white;
+    color: #04aa6d;
     background-color: white;
     font-size: 40px;
     /* flex-direction: column;
@@ -65,9 +65,8 @@ input, button{
 }
 
 
-.xbutton a:visited {
-    color: #04aa6d;/* 방문된 상태일 때의 색상 */
-}
+/* .xbutton a:visited {} */
+
 /* .main
 {
     height: 10000px;
@@ -81,120 +80,114 @@ input, button{
     height: 520px;
     /* border: 2px solid green; */
     border-radius: 16px;
-    margin: 32px 415.545px 32px 415.545px ;
+    margin: 32px 415.545px 32px 415.545px;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     padding: 0px 32px;
     background-color: white;
-    color : #04aa6d;
-    
-}   
-.Welcomeback
-{
+    color: #04aa6d;
+
+}
+
+.Welcomeback {
     display: flex;
     margin-top: 0px;
     margin-bottom: 16px;
-    width : 486px;
-    height : 31.72px;
+    width: 486px;
+    height: 31.72px;
     box-sizing: border-box;
     margin-right: 20px;
     justify-content: center;
 }
 
-.signup
-{
+.signup {
     display: flex;
-    margin : 0px;
-    margin-top : 8px;
+    margin: 0px;
+    margin-top: 8px;
     margin-bottom: 8px;
-    width : 486px;
-    height : 40px;
+    width: 486px;
+    height: 40px;
     margin-right: 30px;
-    margin-top : 15px;
+    margin-top: 15px;
     justify-content: center;
 }
-.signupurl
-{
+
+.signupurl {
     margin-left: 10px;
 }
-.email, .password
-{
-    margin : 0px;
-    padding-top:3.5px;
-    width : 486px;
-    height : 40px;
+
+.email,
+.password {
+    margin: 0px;
+    padding-top: 3.5px;
+    width: 486px;
+    height: 40px;
 
 }
-.emailbox, .passwordbox
-{
-    margin : 0px 0px 24px;
+
+.emailbox,
+.passwordbox {
+    margin: 0px 0px 24px;
     padding: 12px 16px;
-    width : 486px;
-    height : 48px;
+    width: 486px;
+    height: 48px;
+    border: 2px solid #04aa6d;
 }
 
-.emailbox:hover, .passwordbox:hover
-{
-    border : 6px solid #04aa6d
+.emailbox:hover,
+.passwordbox:hover {
+    border: 2px solid #D9EEE1;
 }
 
-.loginbutton
-{
-    margin:0px;
+.loginbutton {
+    margin: 0px;
     padding: 11px 24px;
-    width : 486px;
-    height : 48px;
+    width: 486px;
+    height: 48px;
     font-style: black;
     background-color: #04aa6d;
     border: white;
     font-weight: bold;
 }
 
-.loginbutton:hover
-{
-    background-color:#04aa6d;
+.loginbutton:hover {
+    background-color: #04aa6d;
 }
 
-.problem
-{
-    color : #15F4EE;
-    margin : 0px;
+.problem {
+
+    margin: 0px;
     margin-top: 8px;
-    width : 486px;
-    height : 24px;
+    width: 486px;
+    height: 24px;
 }
 
-.sns
-{
-    height : 90px;
+.sns {
+    height: 90px;
     justify-content: center;
 }
 
-.snslogin
-{
-    margin : 0px;
-    margin-top : 16px;
+.snslogin {
+    margin: 0px;
+    margin-top: 16px;
     margin-bottom: 8px;
-    width : 486px;
-    height : 21.69px;
+    width: 486px;
+    height: 21.69px;
 
 }
 
-.snsbuttons
-{
-    color :black;
+.snsbuttons {
+    color: black;
     padding: 11px 24px 11px 24px;
-    width : 155.33px;
-    height : 40px;
+    width: 155.33px;
+    height: 40px;
 }
 
-.snsbuttons:hover
-{
-    color :#15F4EE;
+.snsbuttons:hover {
+    color: #D9EEE1;
 }
 
-.xbutton:hover
-{
-    color : hsl(178, 100%, 67%) ;
+.xbutton:hover {
+    color: #D9EEE1;
 }

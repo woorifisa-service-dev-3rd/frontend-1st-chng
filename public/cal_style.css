@@ -53,10 +53,10 @@ body {
 section {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
     height: 100%;
-    margin-top: 80px;
+    margin-top: 30px;
     font-family: "Noto Sans KR", sans-serif;
 }
 
@@ -67,15 +67,11 @@ section {
     align-items: center;
     text-align: center;
     color: #04aa6d;
-    font-size: 40px;
-
-
-
+    font-size: 25px;
 }
 
 .cal_title h1 {
     font-weight: bold;
-
 }
 
 
@@ -84,10 +80,10 @@ section {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    height: 260px;
+    height: 300px;
     width: 1000px;
     border-radius: 35px;
-    margin: 10px;
+    margin: 0px;
     padding: 20px;
     background-color: lightgray;
 
@@ -322,39 +318,40 @@ section {
     background-color: transparent;
 }
 
-.last_mid{
+.last_mid {
     display: flex;
     justify-content: center;
 }
 
 .mytable_container {
-    margin-top: 100px;
+    margin-top: 70px;
     display: flex;
     justify-content: center;
-    border-bottom: 1px solid #ccc; 
+    border-bottom: 1px solid #ccc;
     align-items: center;
     /* border-bottom: 1px solid #ccc;  */
     border-radius: 35px;
     /* background-color: lightgray; */
-    width: 80%
+
 }
 
 #myTable {
-    border: 2PX solid #04aa6d; 
-    border-collapse: collapse; 
-    width: 80%; 
+
+    width: 80%;
     font-family: "Noto Sans KR", sans-serif;
-    border-radius: 25%;
+    border-radius: 35px;
     height: 60%;
     margin-top: 10px;
+    background-color: #d3d3d3;
 }
 
-#myTable th, #myTable td {
-    /* border: 1px solid black;  */
-    border : none;
-    padding: 8px; 
+#myTable th,
+#myTable td {
+    border: 1px solid black;
+    border: none;
+    padding: 8px;
     text-align: center;
-    border-radius: 25px; 
+    border-radius: 10px;
     font-family: "Noto Sans KR", sans-serif;
 }
 

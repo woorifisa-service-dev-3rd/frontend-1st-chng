@@ -129,7 +129,8 @@ let exchangeRates = {};
 
 const fetchExchangeRates = async () => {
     // console.log("getExchange 함수 실행 시작");
-    const searchDate = new Date().toISOString().split('T')[0].replace(/-/g, ''); // yyyyMMdd 형식
+    // const searchDate = new Date().toISOString().split('T')[0].replace(/-/g, ''); // yyyyMMdd 형식
+    const searchDate = "20240718";
     const dataType = "AP01";
 
     // const query = {

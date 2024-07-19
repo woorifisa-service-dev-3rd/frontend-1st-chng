@@ -117,3 +117,15 @@ margin 및 padding으로 기본 10px 여백 적용
 #### 이후 성능 향상
 
 ![image](https://github.com/woorifisa-service-dev-3rd/frontend-1st-chng/assets/123541776/7c186cdf-0006-41e3-b759-dc1acac28ba6)
+
+
+#### GitHub 협업 전략
+1. Pull Request 포멧 설정
+2. Merge시 함께 코드 리뷰
+
+#### Eslint 협업 규칙
+1. No Var : 중복 선언을 방지하기 위하여
+2. No unused Vars : 의미 없는 변수 생성 방지를 위해서
+3. no-underscore-dange : 가능한 변수명의 범위
+4. prefer-arrow-callback : 주로 콜백함수를 활용, 활용시 화살표를 사용하는 방식으로 구현을 습관화
+5. require-await: async 함수에서 await를 활용하는 습관화.

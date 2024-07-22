@@ -39,17 +39,22 @@ chng는 누구나 간편하게 사용할 수 있으며, 실시간 환율을 토�
 
 ### 팀원 구성
 
-정석진
-
-임지혁
-
-이현아
+<table>
+  <tr>
+    <td height="140px" align="center"> <a href="https://github.com/Jeongseokjin"> <img src="https://avatars.githubusercontent.com/u/64997303?v=4" width="140px" />
+      <br /> 정석진</a></td>
+    <td height="140px" align="center"> <a href="https://github.com/jihyuk0414"> <img src="https://avatars.githubusercontent.com/u/82851869?v=4" width="140px" />
+      <br /> 임지혁</a></td>
+    <td height="140px" align="center"> <a href="https://github.com/gusdk19"> <img src="https://avatars.githubusercontent.com/u/128590006?v=4" width="140px" />
+      <br /> 이현아</a></td>
+  </tr>
+</table>
 
 <br>
 
 ### 사용 스택
 
-Front: `HTML`, `CSS`
+Front: `HTML`, `CSS`, `JavaScript`, `Node.js`
 
 버전 및 이슈 관리: `Github`, `Github Issues`, `Github Project`
 
